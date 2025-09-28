@@ -1,0 +1,158 @@
+// EXPERIMENT 6.1 - Variable Declaration and Types
+console.log("EXPERIMENT 6.1 - Variable Declaration and Types\n");
+
+var name = "RPN";
+let practicalUsage = 0;
+let isNotation = true;
+
+console.log("Notation name: %s", name);
+console.log("Prac usage: %d", practicalUsage); 
+console.log("Is notation: %s", isNotation);
+
+console.log("Type of name:", typeof(name));
+console.log("Type of practicalUsage:", typeof(practicalUsage));
+console.log("Type of isNotation:", typeof(isNotation));
+
+console.log("\n" + "=".repeat(50) + "\n");
+
+// EXPERIMENT 6.2 - Basic Arithmetic Operations
+console.log("EXPERIMENT 6.2 - Basic Arithmetic Operations\n");
+
+let varX = 10;
+let varY = 5;
+
+console.log(`varX = ${varX}, varY = ${varY}`);
+console.log(`Addition: ${varX} + ${varY} = ${varX + varY}`);
+console.log(`Subtraction: ${varX} - ${varY} = ${varX - varY}`);
+console.log(`Multiplication: ${varX} * ${varY} = ${varX * varY}`);
+console.log(`Division: ${varX} / ${varY} = ${varX / varY}`);
+console.log(`Modulus: ${varX} % ${varY} = ${varX % varY}`);
+
+console.log("\n" + "=".repeat(50) + "\n");
+
+// EXPERIMENT 6.3 - Arithmetic Operations using Switch
+console.log("EXPERIMENT 6.3 - Arithmetic Operations using Switch\n");
+
+let numA = 20; 
+let numB = 5;
+
+console.log(`numA = ${numA}, numB = ${numB}`);
+
+let operators = ["+", "-", "*", "/"];
+
+for (let operator of operators) {
+  let result;
+  switch (operator) {
+    case "+":
+      result = numA + numB;
+      break;
+
+    case "-":
+      result = numA - numB;
+      break;
+
+    case "*":
+      result = numA * numB;
+      break;
+
+    case "/":
+      result = numB !== 0 ? numA / numB : "Error: Division by zero";
+      break;
+    default:
+      result = "Invalid operator";
+  }
+
+  console.log(`${numA} ${operator} ${numB} = ${result}`); // Fixed: changed a,b to numA,numB
+}
+
+console.log("\n" + "=".repeat(50) + "\n");
+
+// EXPERIMENT 6.4 - Voting Eligibility Check
+console.log("EXPERIMENT 6.4 - Voting Eligibility Check\n");
+
+let userAge = prompt("Enter your age:");
+userAge = Number(userAge);
+
+console.log(`Entered age: ${userAge}`);
+
+if (userAge >= 18) {
+  console.log("Eligible to vote");
+} else {
+  console.log("Not eligible to vote");
+}
+
+console.log("\n" + "=".repeat(50) + "\n");
+
+// EXPERIMENT 6.5 - Grade Calculation
+console.log("EXPERIMENT 6.5 - Grade Calculation\n");
+
+let studentMarks = prompt("Enter your marks:"); 
+studentMarks = Number(studentMarks);
+
+console.log(`Entered marks: ${studentMarks}`);
+
+if (studentMarks >= 90) {
+  console.log("Grade A");
+} else if (studentMarks >= 75) {
+  console.log("Grade B");
+} else if (studentMarks >= 50) {
+  console.log("Grade C");
+} else {
+  console.log("Fail");
+} 
+
+console.log("\n" + "=".repeat(50) + "\n");
+
+// EXPERIMENT 6.6 - Day of Week
+console.log("EXPERIMENT 6.6 - Day of Week\n");
+
+let dayNumber = parseInt(prompt("Enter a number (1-7): "));
+
+console.log(`Entered day number: ${dayNumber}`);
+
+switch (dayNumber) {
+  case 1: console.log("Monday"); break;
+  case 2: console.log("Tuesday"); break;
+  case 3: console.log("Wednesday"); break;
+  case 4: console.log("Thursday"); break;
+  case 5: console.log("Friday"); break;
+  case 6: console.log("Saturday"); break;
+  case 7: console.log("Sunday"); break;
+  default: console.log("Invalid day");
+}
+
+console.log("\n" + "=".repeat(50) + "\n");
+
+// 6.7 (a): Even or Odd Check
+console.log("6.7 (a) - Even or Odd Check");
+
+let checkNumber = parseInt(prompt("Enter a number: "));
+console.log(`Entered number: ${checkNumber}`);
+
+if (checkNumber % 2 === 0) {
+  console.log(checkNumber + " is Even");
+} else {
+  console.log(checkNumber + " is Odd");
+}
+
+console.log("\n" + "-".repeat(30));
+
+// 6.7 (b): Largest of three numbers
+console.log("6.7 (b) - Largest of Three Numbers");
+
+let num1 = parseInt(prompt("Enter first number: "));
+let num2 = parseInt(prompt("Enter second number: "));
+let num3 = parseInt(prompt("Enter third number: "));
+
+console.log(`Numbers entered: ${num1}, ${num2}, ${num3}`);
+
+if (num1 >= num2 && num1 >= num3) {
+  console.log("Largest is " + num1);
+} else if (num2 >= num1 && num2 >= num3) {
+  console.log("Largest is " + num2);
+} else {
+  console.log("Largest is " + num3);
+}
+
+console.log("\n" + "=".repeat(50));
+console.log("!DONE!");
